@@ -1,0 +1,75 @@
+#Nombre: Maria Angelica Quiñonez Valencia
+#Codigo: 1006386457
+#Ejercicio 1
+
+
+
+
+# Precios constantes
+PRECIO_HELADO_BASE = 1.90
+
+# Variables de control
+total_a_pagar = 0.0
+
+
+print(" ¡Bienvenido a la Heladería Placer en tu paladar! \n")
+
+continuar = input(" ¿Deseas realizar una compra?,escribes 'si' y selecciona una opción del menú o 'no' para salir del programa \n") 
+
+# Ciclo principal para procesar uno o varios pedidos
+while continuar == "SI" or continuar == "si":
+    print("--- MENÚ DE TOPPINGS ---")
+    print("1. Sin topping   ($1.90)")
+    print("2. Frutas        ($0.50)")
+    print("3. Granola       ($1.50)")
+    print("4. Oreo          ($1.00)")
+    print("5. Brownie       ($0.75)")
+    
+    opcion = input("\nIngrese el nombre o número del topping que desea: ").strip().lower()
+    
+    # Evaluación del topping y cálculo del costo del helado actual
+    if opcion in ["1", "sin topping", "ninguno", "sin"]:
+        costo_helado = PRECIO_HELADO_BASE
+        print(">> Añadido: Helado tradicional sin topping ($1.90).")
+        total_a_pagar += costo_helado
+        
+    elif opcion in ["2", "frutas", "topping de frutas"]:
+        costo_helado = PRECIO_HELADO_BASE + 0.50
+        print(">> Añadido: Helado con Topping de Frutas ($2.40).")
+        total_a_pagar += costo_helado
+        
+    elif opcion in ["3", "granola", "topping de granola"]:
+        costo_helado = PRECIO_HELADO_BASE + 1.50
+        print(">> Añadido: Helado con Topping de Granola ($3.40).")
+        total_a_pagar += costo_helado
+        
+    elif opcion in ["4", "oreo", "topping de oreo"]:
+        costo_helado = PRECIO_HELADO_BASE + 1.00
+        print(">> Añadido: Helado con Topping de Oreo ($2.90).")
+        total_a_pagar += costo_helado
+        
+    elif opcion in ["5", "brownie", "topping de brownie"]:
+        costo_helado = PRECIO_HELADO_BASE + 0.75
+        print(">> Añadido: Helado con Topping de Brownie ($2.65).")
+        total_a_pagar += costo_helado
+        
+    else:
+        # Mensaje para cuando el topping no existe en el menú
+        print(" Lo sentimos, no contamos con el topping solicitado en nuestro menú.")
+        print("   (Este helado no fue añadido a la cuenta).")
+
+    # Preguntar si el usuario desea realizar otro pedido
+    print("-" * 45) #usamos para imprimir una linea divisora
+    continuar = input("¿Desea agregar otro helado a su pedido? (si/no): ").strip().lower()
+    print("-" * 45 + "\n")#usamos para imprimir una linea divisora
+
+# Mensaje con la cuenta total 
+print("=================================================")
+print("             FACTURA DE SU COMPRA                ")
+print("=================================================")
+if total_a_pagar > 0:
+    print(f" ¡Gracias por su compra! El total a pagar es: ${total_a_pagar:.2f}")
+    print(" ¡Que disfrute su(s) helado(s) y tenga un dulce día! ")
+else:
+    print("Aún no has realizado ningún pedido. ¡Te esperamos pronto, en la Heladeria Plcaer en tu paladar!")
+print("=================================================")
