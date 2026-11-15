@@ -111,5 +111,4 @@ def ejecutar_calculadora():
   print(f"Factorial ({num_fact}!): {factorial(num_fact)}")
   print(f"Inversa / Admitancia (Z = {z} Ω -> Y = 1/Z): {inversa(z)} S")
 
-if __name__ == "__main__":
-  ejecutar_calculadora()
+ejecutar_calculadora()
