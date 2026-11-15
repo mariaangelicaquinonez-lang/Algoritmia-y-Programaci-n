@@ -133,8 +133,6 @@ def ejecutar_sistema():
     else:
       print("Opción no válida. Elija un número del 1 al 5.")
 
-
-if __name__ == "__main__":
-  ejecutar_sistema()
+ejecutar_sistema()
 
 
