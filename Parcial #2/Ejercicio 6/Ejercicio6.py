@@ -115,7 +115,7 @@ def ejecutar_maquina_dispensadora():
 
     otra_compra = input("\n¿Desea comprar otro producto? (si/no): ").strip().lower()
     if otra_compra != "s":
-      print("Gracias por usar la máquina dispensadora.")
+      print("Gracias por su compra.")
       break
 
 
